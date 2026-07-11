@@ -9,6 +9,9 @@ class BullmqDash < Formula
 
   def install
     libexec.install Dir["*"]
+    # Vendor runtime dependencies next to dist/index.js so Bun resolves them
+    # locally instead of auto-installing into the user cache on first run.
+    system formula_opt_bin("bun")/"bun", "install", "--production", "--cwd", libexec
     (bin/"bullmq-dash").write <<~SH
       #!/bin/bash
       exec "#{formula_opt_bin("bun")}/bun" "#{libexec}/dist/index.js" "$@"
