@@ -11,7 +11,7 @@ class BullmqDash < Formula
     libexec.install Dir["*"]
     (bin/"bullmq-dash").write <<~SH
       #!/bin/bash
-      exec "#{Formula["bun"].opt_bin}/bun" "#{libexec}/dist/index.js" "$@"
+      exec "#{formula_opt_bin("bun")}/bun" "#{libexec}/dist/index.js" "$@"
     SH
   end
 
