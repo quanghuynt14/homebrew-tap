@@ -1,8 +1,8 @@
 class BullmqDash < Formula
   desc "Terminal and browser dashboard for BullMQ queue monitoring"
   homepage "https://github.com/quanghuynt14/bullmq-dash"
-  url "https://registry.npmjs.org/bullmq-dash/-/bullmq-dash-0.3.2.tgz"
-  sha256 "61a160b4a7bef92e7afe66e6268f1a05748526eae101396cfdb12554f95ac4a3"
+  url "https://registry.npmjs.org/bullmq-dash/-/bullmq-dash-0.4.0.tgz"
+  sha256 "e881e1be51c4d67d8f8e35d5db60659cc0d2a971be38adb2781ee022f7460e95"
   license "MIT"
 
   depends_on "bun"
